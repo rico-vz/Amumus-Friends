@@ -35,6 +35,8 @@
             statusLabel = new MaterialSkin.Controls.MaterialLabel();
             creditLabel = new MaterialSkin.Controls.MaterialLabel();
             exportsListBox = new ListBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // exportBtn
@@ -131,10 +133,22 @@
             exportsListBox.TabIndex = 6;
             exportsListBox.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.amumusfriends;
+            pictureBox1.Location = new Point(413, 123);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(97, 94);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
             // amumus_friends
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(518, 262);
+            Controls.Add(pictureBox1);
             Controls.Add(exportsListBox);
             Controls.Add(creditLabel);
             Controls.Add(statusLabel);
@@ -146,8 +160,10 @@
             MaximizeBox = false;
             Name = "amumus_friends";
             Padding = new Padding(3, 72, 3, 3);
+            Sizable = false;
             Text = "Amumus Friends";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -160,5 +176,6 @@
         private MaterialSkin.Controls.MaterialLabel statusLabel;
         private MaterialSkin.Controls.MaterialLabel creditLabel;
         private ListBox exportsListBox;
+        private PictureBox pictureBox1;
     }
 }
